@@ -4,34 +4,34 @@ public class Acesso {
 	public static final float VALOR_FRACAO = (float) 2.0;
 	public static final float VALOR_HORA = (float) 7.0;
 	public static final float VALOR_DIARIA = (float) 30.0;
-	
+
 	public String placa;
 	public int dia, mes, ano;
-	public int horaEntrada, 
+	public int horaEntrada,
 	           minutosEntrada;
-	public int horaSaida, 
+	public int horaSaida,
 			   minutosSaida;
-	
+
 
 
 	public Acesso() {}
 
-	
-	public Acesso(int dia, int mes, int ano, int horaEntrada, int minutosEntrada) { 
+
+	public Acesso(int dia, int mes, int ano, int horaEntrada, int minutosEntrada) {
 		this.dia = dia;
 		this.mes = mes;
 		this.ano = ano;
 		this.horaEntrada = horaEntrada;
 		this.minutosEntrada = minutosEntrada;
 	}
-	
-	
+
+
 	public float calcularValor() { 
 		CalculaValor calculaValor = new CalculaValor(this,0,0,0,0,0);
 		return calculaValor.compute();
 	}
-	
-	
+
+
 	public void setHoraSaida(int horaSaida) {
 		this.horaSaida = horaSaida;
 	}
@@ -40,7 +40,7 @@ public class Acesso {
 	public void setMinutosSaida(int minutosSaida) {
 		this.minutosSaida = minutosSaida;
 	}
-	
-	
-	
+
+
+
 }
